@@ -1,0 +1,27 @@
+diff --git a/services/service-com-amazonaws-lambda-awsgirapiservice/src/state/execution/run_memory.rs b/services/service-com-amazonaws-lambda-awsgirapiservice/src/state/execution/run_memory.rs
+index 565d4144f..e846787e3 100644
+--- a/services/service-com-amazonaws-lambda-awsgirapiservice/src/state/execution/run_memory.rs
++++ b/services/service-com-amazonaws-lambda-awsgirapiservice/src/state/execution/run_memory.rs
+@@ -20,6 +20,7 @@ use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
+ const PAGE_BYTES: u64 = 4_096;
+ 
+ /// How many bytes of memory THIS thread has faulted in, as the host reports it.
++#[cfg(target_os = "linux")]
+ pub(super) fn faulted_bytes() -> u64 {
+     match ::nix::sys::resource::getrusage(::nix::sys::resource::UsageWho::RUSAGE_THREAD) {
+         Ok(usage) => {
+@@ -30,6 +31,14 @@ pub(super) fn faulted_bytes() -> u64 {
+     }
+ }
+ 
++/// macOS has no per-thread page-fault count (`RUSAGE_THREAD` is Linux-only), and a
++/// process-wide count would charge one run for every other run's memory. Report nothing, so
++/// no run is measured or stopped for memory it did not use.
++#[cfg(not(target_os = "linux"))]
++pub(super) fn faulted_bytes() -> u64 {
++    0
++}
++
+ /// What ONE run holds of the host: the baseline the host took for it, and the greatest
+ /// reading taken since.
+ ///
