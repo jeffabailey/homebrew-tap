@@ -1,4 +1,6 @@
-# Jeffabailey Tap
+# Jeff Bailey's Tap
+
+<https://jeffbailey.us>
 
 ## Formulae
 
