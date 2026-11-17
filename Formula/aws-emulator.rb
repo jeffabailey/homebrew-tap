@@ -1,9 +1,9 @@
 class AwsEmulator < Formula
   desc "Local emulator of the AWS APIs"
   homepage "https://github.com/aws/aws-emulator"
-  url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.481-1_amd64.deb"
-  version "1.0.481"
-  sha256 "fd8f96b1d51384c405f8d545ad2b8ece06d398acafdbf4ad7cfbe27a595d8e19"
+  url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.485-1_amd64.deb"
+  version "1.0.485"
+  sha256 "f680998e0154eb004b11c7092b7429d7f6a15f4c57b29c85985b8ca9ac9199ce"
   license all_of: ["CC0-1.0", "Apache-2.0"]
 
   livecheck do
