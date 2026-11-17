@@ -1,9 +1,9 @@
 class AwsEmulator < Formula
   desc "Local emulator of the AWS APIs"
   homepage "https://github.com/aws/aws-emulator"
-  url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.481-1_amd64.deb"
-  version "1.0.481"
-  sha256 "fd8f96b1d51384c405f8d545ad2b8ece06d398acafdbf4ad7cfbe27a595d8e19"
+  url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.490-1_amd64.deb"
+  version "1.0.490"
+  sha256 "3b9a6f9a1e1e4543c76d033f669af7687953eff108e4ec8982d9af91189561e9"
   license all_of: ["CC0-1.0", "Apache-2.0"]
 
   livecheck do
@@ -19,8 +19,8 @@ class AwsEmulator < Formula
     # Upstream ships Linux packages only. This tap builds macOS arm64 from the upstream tag
     # with macos/aws-emulator-run-memory.patch (see macos/build-aws-emulator.sh).
     on_arm do
-      url "https://github.com/jeffabailey/homebrew-tap/releases/download/aws-emulator-1.0.481/aws-emulator-1.0.481-macos-arm64.tar.gz"
-      sha256 "62a185a2b80248650f31a11aa8ede4ac2c55f41dfbe2d45146e2473b30a2dcfc"
+      url "https://github.com/jeffabailey/homebrew-tap/releases/download/aws-emulator-1.0.490/aws-emulator-1.0.490-macos-arm64.tar.gz"
+      sha256 "a5619ea05f288650cb6379bc2e76a9d2750552216638c372b89c867727cefb5b"
     end
   end
 
@@ -28,8 +28,8 @@ class AwsEmulator < Formula
     depends_on "xz" => :build
 
     on_arm do
-      url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.481-1_arm64.deb"
-      sha256 "5678945846c5db9444d682a9e28fdc57616224702d7678f36ca020c4495131ac"
+      url "https://downloads.aws.com/aws-emulator/packages/aws-emulator/LTS/aws-emulator_1.0.490-1_arm64.deb"
+      sha256 "844c0ea1810bb627d0abcdd57375b4dd03fc8ad64a3da9df2cc138b4c85f58b4"
     end
   end
 
