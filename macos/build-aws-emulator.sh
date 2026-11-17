@@ -12,7 +12,9 @@ release_date="${2:?release date, for example 2026.11.16}"
 work="${3:-${TMPDIR:-/tmp}/aws-emulator-build}"
 here="$(cd "$(dirname "$0")" && pwd)"
 
-[[ "$(uname -s)-$(uname -m)" == "Darwin-arm64" ]] || {
+os="$(uname -s)"
+arch="$(uname -m)"
+[[ "${os}-${arch}" == "Darwin-arm64" ]] || {
   echo "Run this on macOS arm64." >&2
   exit 1
 }
