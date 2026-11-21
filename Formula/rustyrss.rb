@@ -2,6 +2,7 @@ class Rustyrss < Formula
   desc "Self-hosted RSS server with REST, WebSocket and MCP, plus a terminal reader"
   homepage "https://github.com/jeffabailey/homebrew-tap"
   url "https://github.com/jeffabailey/homebrew-tap/releases/download/rustyrss-0.1.0/rustyrss-0.1.0-macos-arm64.tar.gz"
+  version "0.1.0"
   sha256 "99c50e2559961e66cd5c225f4e850dd99d35a9fe0666b06c55db104f7039b87d"
   license "Apache-2.0"
 
