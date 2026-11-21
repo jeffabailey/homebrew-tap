@@ -7,6 +7,7 @@
 | Formula | Description | Platforms |
 | --- | --- | --- |
 | `aws-emulator` | [AWS Emulator](https://github.com/aws/aws-emulator), a local emulator of the AWS APIs. Linux installs the upstream package. macOS installs a binary that this tap builds from the upstream tag with one patch; see [`macos/`](macos/). | Linux (x86_64, arm64), macOS (arm64) |
+| `rustyrss` | A self-hosted RSS reader: `rustyrss-server` (REST, WebSocket and MCP, with DuckDB storage) and `rustyrss-tui`, a terminal reader for it. The source is private; this tap publishes the binaries as its own releases. | Linux (arm64), macOS (arm64) |
 
 ### Releasing a new aws-emulator version
 
