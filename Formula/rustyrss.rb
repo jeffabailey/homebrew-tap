@@ -1,19 +1,19 @@
 class Rustyrss < Formula
   desc "Self-hosted RSS server with REST, WebSocket and MCP, plus a terminal reader"
   homepage "https://github.com/jeffabailey/homebrew-tap"
-  url "https://github.com/jeffabailey/homebrew-tap/releases/download/rustyrss-0.1.4/rustyrss-0.1.4-macos-arm64.tar.gz"
-  version "0.1.4"
-  sha256 "4e58fef8ca4c20c51abfddb042bd3303e06f47d7e544a1ee2f22d2e6eb1bfb3a"
+  url "https://github.com/jeffabailey/homebrew-tap/releases/download/rustyrss-0.1.5/rustyrss-0.1.5-macos-arm64.tar.gz"
+  version "0.1.5"
+  sha256 "233760ad05215a729c764ed0d1ca76eb2de5511f9b7317c6f7a827bba9419d20"
   license "Apache-2.0"
 
   # The source repository is private. This tap publishes the binaries as
-  # releases of its own, built from rustyrss commit 2eb0b72.
+  # releases of its own, built from rustyrss commit d19b21c.
   depends_on arch: :arm64
 
   on_linux do
     on_arm do
-      url "https://github.com/jeffabailey/homebrew-tap/releases/download/rustyrss-0.1.4/rustyrss-0.1.4-linux-arm64.tar.gz"
-      sha256 "19b4a43fc3f7c916e9b7ee24f058579317927623084cc7b231c0a78e31f7c4bf"
+      url "https://github.com/jeffabailey/homebrew-tap/releases/download/rustyrss-0.1.5/rustyrss-0.1.5-linux-arm64.tar.gz"
+      sha256 "31bae734eda360c66f2fc878960da3e759acf51efb71bff794eb2acd7e21341d"
     end
   end
 
